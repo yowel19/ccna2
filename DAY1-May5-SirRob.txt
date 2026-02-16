@@ -288,10 +288,10 @@ configure terminal
  destination-pattern 11..
  session target ipv4:10.11.100.8
  codec g711ULAW
-  !dial-peer voice 12 Voip
-  !destination-pattern 12..
-  !session target ipv4:10.12.100.8
-  !codec g711ULAW
+dial-peer voice 12 Voip
+ destination-pattern 12..
+ session target ipv4:10.12.100.8
+ codec g711ULAW
 dial-peer voice 21 Voip
  destination-pattern 21..
  session target ipv4:10.21.100.8
@@ -332,10 +332,10 @@ dial-peer voice 62 Voip
  destination-pattern 62..
  session target ipv4:10.62.100.8
  codec g711ULAW
-dial-peer voice 71 Voip
- destination-pattern 71..
- session target ipv4:10.71.100.8
- codec g711ULAW
+! dial-peer voice 71 Voip
+ ! destination-pattern 71..
+ ! session target ipv4:10.71.100.8
+ ! codec g711ULAW
 dial-peer voice 72 Voip
  destination-pattern 72..
  session target ipv4:10.72.100.8
@@ -646,7 +646,7 @@ conf t
    name 7172
 !
   voice register pool 1
-    id mac ____.____.____
+    id mac d257.803a.03b2
     number 1 dn 1
     dtmf-relay sip-notify
     username 7171 password 7171
@@ -672,6 +672,7 @@ exit
           
 sip-ua
 sip-server ipv4:192.168.k.1
+
 
 
 
